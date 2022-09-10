@@ -6,7 +6,7 @@
     <meta http=equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic e-commerce</title>
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" ></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,8 +16,8 @@
     
         <ul id="navbar">
             <li><a href="index.html">Why MagicMassage</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#reviews">Reviews</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <button >Order now</button>
         </ul>
@@ -162,12 +162,57 @@
 <img src="images/Payments.png" alt="">
 </div>
 
-
 </div>
+</section>
+
+<section id="reviewPage">
+    <div class="title">
+        <h1>Hear what our customers </h1>
+        <div id="design">
+            <h1>are saying</h1><img src="images/Vector 198 (Stroke).png"> 
+            </div>
+        </div>
+        <div id="readWrite">
+            <div id="read">
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <p>131 total reviews</p>
+        </div>
+        <button>Write a review</button>
+        </div>
+        <div id=reviews>
+            
+        </div>
 </section>
 
 
     <script>
+
+const Fake_data=[
+        {id: "1", src:"images/1pic.png" ,review: "I love the MagicMassage! It’s simple to use, does not mess up my curly hair as many other similar products do, and the massage is relaxing as it is refreshing. I feel like it has been made for my scalp! It just feels right."},
+        {id: "2", src:"images/2pic.png", review: "I could not be happier with this product! I use it at night to relax and it does wonders for me. My kids and dog also love it, they’ll sit and let me massage their scalp for hours. At first my Labrador was hesitant not knowing what it was, but now she gets excited as soon as I take the MagicMassage out."},
+        {id: "3",src:"images/3pic.png", review: "It arrived in perfect condition, and the packaging was immaculate. It felt amazing on my head, like someone was massaging it with the perfect pressure and speed. My long hair doesn't get caught in it at all, and I feel relaxed after using it. Best purchase I’ve made in a LONG time!"},
+        {id:"4",src:"images/4pic.png", review: "I could not love this massager more. I use it for scalp stimulation during showers as it feels great to massage with shampoo. I love that it's light enough to carry it with me when I travel and comfortable to use. The product looks luxurious and would recommend this to anyone looking for a high quality head massager."}
+        
+    ]
+    document.getElementById('reviews').innerHTML = Fake_data.map(user => 
+        `<div>
+        
+        <img src=${user.src} />
+        <h3>Megan K.</h3>
+        <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+          <p>${user.review}</p>
+        </div>`
+    ).join('')
+
+
          var price = 69.95;
          var onePlus=2*price;
          var oldPrice=(3*price).toFixed(2);
