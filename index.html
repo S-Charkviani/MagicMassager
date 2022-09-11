@@ -6,7 +6,7 @@
     <meta http=equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic e-commerce</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,10 +28,12 @@
    
     <div id="title">
     <h1>All-in-one Massager that works like </h1>
+    <div class="wordArrow">
     <div id="design">
         <h1>magic!</h1><img src="images/Vector 198 (Stroke).png"> 
     </div>
-    <img src="images/Arrow 4.png"  alt="">
+    <img class="frontArrow" src="images/Arrow 4.png"  alt="">
+</div>
 </div>
 
     <div id="ads">
@@ -72,13 +74,10 @@
                 <li>lifetime of comfort</li>
             </ul>
         </blockquote>
-    </div>
-    
-    </div>
+    </div>   
 
-    <div id="visual">
-        <img  src="images/Massager.png" alt="">
     </div>
+    <img class="massager" src="images/Massager.png" alt=""> 
     <div id="order">
     <button style="font-size:18px;">Get the MagisMassage™ now!</button>
 <div id="get">
@@ -89,15 +88,17 @@
 <section id="conditions">
     <div id="container">
 <div id="logo" class="truck"><img src="images/truck.png" alt=""> </div>
-<p>FREE 2-DAY SHIPPING IN THE UNITED STATES!</p>
+<p>free 2-day shipping in the united states!</p>
+<p class="shortText">Free 2 day USA shipping</p>
 </div>
 <div id="container">
     <div id="logo" class="tick"><img src="images/tick.png" alt=""></div>
-    <p>30-DAY 100% MONEY BACK GUARANTEE</p>
+    <p>30-day 100% money-back guarantee</p>
+    <p class="shortText">100% money back guarantee</p>
     </div>
     <div id="container">
         <div id="logo" class="star"><img src="images/star.png" alt=""></div>
-        <p>RAVE REVIEWS FROM OUR CUSTUMERS</p>
+        <p>rave reviews from our customers</p>
         </div>
 </section>
 
@@ -174,11 +175,12 @@
         </div>
         <div id="readWrite">
             <div id="read">
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+
             <p>131 total reviews</p>
         </div>
         <button>Write a review</button>
@@ -188,8 +190,43 @@
         </div>
 </section>
 
+<section id="faqPage">
+    <div class="title">
+        <h1>Frequently Asked </h1>
+        <div id="faqDesign">
+            <h1>Questions</h1><img src="images/white stroke.png"> 
+            </div>
+        </div>
+<div id="faqContent">
+    <img src="images/FAQimage.png" alt="">
+    <div id="select">
+        <select>
+<option selected disabled>How long does the battery last fully charged?</option>
+<option disabled>The MagicMassage™ can last up to 6 hours when it's fully charged.</option>
+        </select>
+        <select>
+            <option disabled selected>Can I use it in the shower?</option>
+        </select>
+        <select>
+            <option disabled selected>What is included in the package</option>
+        </select>
+        <select>
+            <option disabled selected>Is the MagicMassage™ designed only for the head?</option>
+        </select>
+        <div id="seeAll">
+        <select>
+            <option> See all FAQ</option>
+        </div>
+        </select>
+    </div>
+
+</div>
+</section>
+
 
     <script>
+
+        
 
 const Fake_data=[
         {id: "1", src:"images/1pic.png" ,review: "I love the MagicMassage! It’s simple to use, does not mess up my curly hair as many other similar products do, and the massage is relaxing as it is refreshing. I feel like it has been made for my scalp! It just feels right."},
@@ -203,11 +240,13 @@ const Fake_data=[
         
         <img src=${user.src} />
         <h3>Megan K.</h3>
-        <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
-            <i class="fa-sharp fa-solid fa-star"></i>
+        <spin style="flex-direction:row"> 
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                </spin>
           <p>${user.review}</p>
         </div>`
     ).join('')
